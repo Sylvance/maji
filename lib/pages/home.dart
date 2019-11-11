@@ -16,15 +16,15 @@ class HomePage extends StatelessWidget {
             Text('Welcome home, $username!'), 
             Text('You have no pending request'),
             RaisedButton(
-              color: Colors.greenAccent,
-              child: Text('Make a new request'),
+              color: Colors.indigo,
+              child: Text('Make a new request', style: TextStyle(color: Colors.white)),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, 'estate');
+                Navigator.pushReplacementNamed(context, 'order');
               },
             ),
             RaisedButton(
-              color: Colors.lightBlueAccent,
-              child: Text('View past requests  '),
+              color: Colors.blueAccent,
+              child: Text('View past requests  ', style: TextStyle(color: Colors.white)),
               onPressed: () {
                 Navigator.pushReplacementNamed(context, 'orders');
               },

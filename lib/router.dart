@@ -4,7 +4,7 @@ import 'package:letamaji/pages/splash.dart';
 import 'package:letamaji/pages/home.dart';
 import 'package:letamaji/pages/login.dart';
 import 'package:letamaji/pages/register.dart';
-import 'package:letamaji/pages/estate.dart';
+import 'package:letamaji/pages/order.dart';
 import 'package:letamaji/pages/accept.dart';
 import 'package:letamaji/pages/success.dart';
 import 'package:letamaji/pages/orders.dart';
@@ -15,7 +15,7 @@ class FluroRouter {
   static Handler _loginHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => LoginPage());
   static Handler _registerHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => RegisterPage());
   static Handler _homeHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => HomePage(params['username'][0]));
-  static Handler _estateHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => EstatePage());
+  static Handler _orderHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => OrderPage());
   static Handler _acceptHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => AcceptPage());
   static Handler _successHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => SuccessPage());
   static Handler _ordersHandler = Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) => OrdersPage());
@@ -38,8 +38,8 @@ class FluroRouter {
       handler: _homeHandler,
     );
     router.define(
-      'estate',
-      handler: _estateHandler,
+      'order',
+      handler: _orderHandler,
     );
     router.define(
       'accept',

@@ -21,6 +21,13 @@ class _SuccessPageState extends State<SuccessPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Success'),
+        actions: <Widget>[
+          new IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () { 
+              Navigator.pushReplacementNamed(context, 'order'); 
+            })
+        ],
       ),
       body: Center(
         child: FutureBuilder<Transaction>(
@@ -36,13 +43,6 @@ class _SuccessPageState extends State<SuccessPage> {
             return Center(child: CircularProgressIndicator());
           },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Text('Home'),
-        onPressed: () {
-          var username = 'Sylvance';
-          Navigator.pushReplacementNamed(context, 'home/$username');
-        },
       ),
     );
   }
