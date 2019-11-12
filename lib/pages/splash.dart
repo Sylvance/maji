@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashPage> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.blueAccent),
+            decoration: BoxDecoration(color: Color(0xFF21BFBD),),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashPage> {
                         radius: 50.0,
                         child: Icon(
                           Icons.bubble_chart,
-                          color: Colors.blueAccent,
+                          color: Color(0xFF21BFBD),
                           size: 50.0,
                         ),
                       ),
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashPage> {
                         padding: EdgeInsets.only(top: 10.0),
                       ),
                       Text(
-                        "Maji",
+                        "Leta Maji",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

@@ -46,6 +46,13 @@ flutter:
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/bottle1.png
+    - assets/bottle2.png
+    - assets/bottle3.png
+    # - assets/plate4.png
+    # - assets/plate5.png
+    # - assets/plate6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -93,3 +100,6 @@ flutter:
         weight: 800
       - asset: fonts/SF-Pro-Display-Black.otf
         weight: 900
+    - family: Montserrat
+      fonts:
+        - asset: assets/Montserrat-Regular.ttf
