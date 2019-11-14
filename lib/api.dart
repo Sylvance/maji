@@ -7,6 +7,36 @@ import 'package:http/http.dart' as http;
 import 'package:letamaji/models/transaction.dart';
 import 'package:letamaji/models/user.dart';
 
+login(String body) async {
+  Map<String, String> headers = {"Content-type": "application/json"};
+
+  final response =
+      await http.post('http://10.0.2.2:3000/api/v1/users/login', headers: headers, body: body);
+
+  if (response.statusCode == 200) {
+    // If server returns an OK response, parse the JSON.
+    return Transaction.fromJson(json.decode(response.body));
+  } else {
+    // If that response was not OK, throw an error.
+    throw Exception('Failed to load Transaction');
+  }
+}
+
+register(String body) async {
+  Map<String, String> headers = {"Content-type": "application/json"};
+
+  final response =
+      await http.post('http://10.0.2.2:3000/api/v1/users/register', headers: headers, body: body);
+
+  if (response.statusCode == 200) {
+    // If server returns an OK response, parse the JSON.
+    return Transaction.fromJson(json.decode(response.body));
+  } else {
+    // If that response was not OK, throw an error.
+    throw Exception('Failed to load Transaction');
+  }
+}
+
 Future<Transaction> fetchTransaction(int id) async {
   final response =
       await http.get('http://10.0.2.2:3000/api/v1/transactions/$id');
